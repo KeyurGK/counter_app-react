@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
+const data = <span>All good</span>;
+const flash=()=>{
+  alert('Hey');
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Keyur is here to Conquer !
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h>Hi Hello Keyur this side!,{data}</h>
+      <button onClick={flash}>Click me</button>
     </div>
   );
 }
 
+function App2(){
+  return(
+    <p>This is second component</p>
+  )
+}
 export default App;
+
