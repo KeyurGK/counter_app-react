@@ -17,14 +17,37 @@ code {
   display:flex;
   justify-content:center;
   align-items:center;
-  color:black;
+  color:#fff;
 }
-.jokes{
-  background-color:white;
-  padding:2rem; 
-  border-radius:10px;
-  box-shadow:3px 3px 5px rgba(0,0,0,0.2);
-  text-align:center;
-  width:600px;
-  max-width:100%;
+.data{
+  background-image:linear-gradient(to bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.7));
+  min-width:50vw;
+  border-radius:5px;
+  box-shadow:3px 3px 5px rgba(0,0,0,0.5);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:repeat(3,1fr);
+}
+.title{
+  grid-area:1/2/2/3;
+  text-transform: uppercase;
+  text-align: center;
+}
+.data p{
+  grid-area:2/2/3/3;
+  font-size:28px;
+  text-align: center;
+}
+.inc{
+  grid-area:2/3/3/4;
+  font-size:28px;
+  
+}
+.dec{
+  grid-area:2/1/3/2;
+  font-size:28px;
+}
+.reset{
+  grid-area:3/2/4/3;
+  text-transform: uppercase;
 }
