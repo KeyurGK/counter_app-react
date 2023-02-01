@@ -1,23 +1,29 @@
 // import logo from './logo.svg';
 import './App.css';
+import React, {useState,useEffect} from 'react';
+const API_URL='https://api.chucknorris.io/jokes/random';
 
-const data = <span>All good</span>;
-const flash=()=>{
-  alert('Hey');
-}
 function App() {
+  const[joke, setJoke] = useState('The joke will display here');
+
+  const flash=()=>{
+    fetch(API_URL)
+    .then(res => res.json())
+    .then(data => setJoke(data.value));
+  }
+
+  useEffect(()=> {
+   flash();
+  },[]);
   return (
-    <div className="App">
-      <h>Hi Hello Keyur this side!,{data}</h>
-      <button onClick={flash}>Click me</button>
+    <div className="jokes">
+      <h1>Joke Generator</h1>
+      <p>{setJoke}</p>
+      <button onClick={flash}>Generate new Joke😂</button>
     </div>
   );
 }
 
-function App2(){
-  return(
-    <p>This is second component</p>
-  )
-}
+
 export default App;
 
