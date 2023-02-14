@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-// import App from './App';
+// import './index.css';
+import './card-styles.css'
+import Header from "./Header";
+import Social from "./Social";
+import MainContent from './MainContent';
+import Footer from './Footer';
+import App from './App';
 import Practise from './counter';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Practise />
-    
+    <App/>
   </React.StrictMode>
 );
 
